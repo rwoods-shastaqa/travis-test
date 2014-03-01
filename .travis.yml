@@ -6,11 +6,9 @@ gemfile:
 env:
   - DB=sqlite
 script:
-  - pwd
-  - ls
-  - rails --version
-  #- RAILS_ENV=test bundle exec rake db:migrate --trace
-  #- bundle exec rake db:test:prepare
-  #- bundle exec rake
+  - cd TravisTest
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
