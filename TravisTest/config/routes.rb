@@ -1,7 +1,5 @@
 TravisTest::Application.routes.draw do
-  resources :test_travis
-  
-  root to: "test_travis#index"
+  resources :tests
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

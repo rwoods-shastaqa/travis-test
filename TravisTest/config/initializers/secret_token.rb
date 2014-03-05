@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TravisTest::Application.config.secret_key_base = 'ddf9b545b4d93bb18598a0d1aa59afe9d305fbc9a408e26622ae0339eac385f40929fbd6ca66073f95c9107e7bb0fdfe17b19b371f54f75134019035a5b506a6'
+TravisTest::Application.config.secret_key_base = '7709c3a434478b34d24329998303f15bb934ff356d66e0922688473585bdb089c4a79e1a92e3658e4bc38b1c41cfddb93871375d84897ee530d9dcc498a3c3ae'

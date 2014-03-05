@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestTraviTest < ActiveSupport::TestCase
+class TestTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

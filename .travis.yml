@@ -17,4 +17,4 @@ script:
   - "RAILS_ENV=test bundle exec rake db:migrate --trace"
   - "bundle exec rake db:test:prepare"
   - "bundle exec rake"
-  - "ruby sauce_demo.rb"
+  - "ruby ./spec/features/sauce_demo.rb"
