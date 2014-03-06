@@ -17,4 +17,5 @@ element = driver.find_element(:name, 'q')
 element.send_keys "Hello WebDriver!"
 element.submit
 puts driver.title
+puts "\n --- tunnel-identifier: " + ENV["TRAVIS_JOB_NUMBER"]
 driver.quit
