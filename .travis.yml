@@ -20,7 +20,7 @@ script:
   #- "bundle exec rake"
   - "git clone --depth=50 --branch=master git://github.com/rwoods3/sauce-test.git shastaqa/LeapMotionAutomation"
   - "cd shastaqa/LeapMotionAutomation/RailsAutomationProject"
-  - "bundle install"
+  - "bundle update"
   - "SAUCE_USERNAME=shastaqa_rwood"
   - "SAUCE_ACCESS_KEY=9747defc-b9d2-4018-8ada-2d8a0a07fa3a"
   - "bundle exec rake sauce:install:spec"
