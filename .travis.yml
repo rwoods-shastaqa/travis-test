@@ -1,6 +1,6 @@
 --- 
 before_script: 
-  - "echo -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config"
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
   - "curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash"
 env: 
   - DB=sqlite
@@ -18,6 +18,6 @@ script:
   - "RAILS_ENV=test bundle exec rake db:migrate --trace"
   - "bundle exec rake db:test:prepare"
   - "bundle exec rake"
-  - "git clone --depth=50 --branch=master git://rwoods3:Zander1!@github.com:ShastaQAGitHub/LeapMotionAutomation.git shastaqa/LeapMotionAutomation"
+  - "git clone --depth=50 --branch=master git://github.com/rwoods3/sauce-test.git shastaqa/LeapMotionAutomation"
   - "cd shastaqa/LeapMotionAutomation/RailsAutomationProject"
   - "rake sauce:spec"
