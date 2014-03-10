@@ -1,0 +1,22 @@
+--- 
+before_script: 
+  - "curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash"
+env: 
+  - DB=sqlite
+global: 
+  - 
+    secure: "dQEZZExRrHZoPtsJWErQokNV3x/cyA99QCQF8Hf9bn8XAJuJNCHEI/MX8QP6GzXmR/8icy+fsmkkkrAtkgpytC1tXtag15UQy/+xUNnRuT77o3HUjogg4Tc32fY31II7 TMmVOz+h3BNx93LKkIlLLhKlAubuAakF6rbxoQKPXQk="
+  - 
+    secure: "hVeW+Iz/aYzG2LTkZt9aB8NP7ODr/4LxI95TWh9JrVUa+IL0XLeW/LnjEF3tN1baDN1bJF1+Ty3oA48brE7dEAZEwxIZRUFLGZlrCMKVkOmY2ITvx0kUI88ivk2E384q G+8YqZQrYve8hFXxAxY+bMlRuY0jMOMFufhe/B5PMT8="
+language: ruby
+rvm: 
+  - 1.9.3-p448
+script: 
+  - "cd TravisTest"
+  - "bundle update"
+  - "RAILS_ENV=test bundle exec rake db:migrate --trace"
+  - "bundle exec rake db:test:prepare"
+  - "bundle exec rake"
+  - "git clone --depth=50 --branch=master git://github.com/ShastaQAGitHub/LeapMotionAutomation.git shastaqa/LeapMotionAutomation"
+  - "cd shastaqa/LeapMotionAutomation/RailsAutomationProject"
+  - "rake sauce:spec"
