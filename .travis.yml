@@ -1,5 +1,6 @@
 --- 
 before_script: 
+  - "echo -e 'Host github.com\n\tStrictHostKeyChecking no\n' >> ~/.ssh/config"
   - "curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash"
 env: 
   - DB=sqlite
