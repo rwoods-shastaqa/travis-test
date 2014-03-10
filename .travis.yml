@@ -18,5 +18,6 @@ script:
   - "bundle exec rake db:test:prepare"
   - "bundle exec rake"
   - "git clone --depth=50 --branch=master git@github.com:ShastaQAGitHub/LeapMotionAutomation.git shastaqa/LeapMotionAutomation"
+  - "yes"
   - "cd shastaqa/LeapMotionAutomation/RailsAutomationProject"
   - "rake sauce:spec"
