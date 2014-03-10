@@ -24,4 +24,5 @@ script:
   - "export SAUCE_USERNAME=shastaqa_rwood"
   - "export SAUCE_ACCESS_KEY=9747defc-b9d2-4018-8ada-2d8a0a07fa3a"
   - "bundle exec rake sauce:install:spec"
+  - "rake db:migrate"
   - "RUN_ON_SAUCE=true rspec ./spec/features/airspace_store_account_spec.rb"
