@@ -18,7 +18,6 @@ script:
   - "RAILS_ENV=test bundle exec rake db:migrate --trace"
   - "bundle exec rake db:test:prepare"
   - "bundle exec rake"
-  - "git clone --depth=50 --branch=master git@github.com:ShastaQAGitHub/LeapMotionAutomation.git shastaqa/LeapMotionAutomation"
-  - "yes"
+  - "git clone --depth=50 --branch=master https://rwoods3:Zander1!@github.com:ShastaQAGitHub/LeapMotionAutomation.git shastaqa/LeapMotionAutomation"
   - "cd shastaqa/LeapMotionAutomation/RailsAutomationProject"
   - "rake sauce:spec"
